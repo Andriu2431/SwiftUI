@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+//Працівники
+struct FriendsList: View {
     var body: some View {
         //Добавимо navBar
         NavigationView {
@@ -18,12 +19,13 @@ struct ContentView: View {
             }
             //Заголовок для navBar
             .navigationTitle(Text("Friends"))
+            .navigationBarHidden(true)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FriendsList_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FriendsList()
     }
 }

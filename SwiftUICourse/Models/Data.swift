@@ -9,8 +9,12 @@ import Foundation
 import SwiftUI
 import UIKit
 
+//Це буде як заголовок до курсів та вебвінарів
+let swiftbook = UserResponse(id: 1001, name: "Swiftbook", profileImage: "swiftbook", email: "info@swiftbook.ru", likes: "54.4K", text: "Обучение созданию приложений на Swift для всех!\nСамое крупное и дружное сообщество по разработке под iOS :)")
+
 //Масив наших розпарсиних данних
 let userResponse: [UserResponse] = load("userModelData.json")
+let materialResponse: [ProductsResponse] = load("coursesModelData.json")
 
 //Тут парсимо данні в тип UserResponse
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
